@@ -4,3 +4,4 @@ dist/
 package-lock.json
 app/fonts/*.txt
 node_modules/
+app/img/src/
