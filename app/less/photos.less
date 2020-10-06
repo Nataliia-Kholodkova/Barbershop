@@ -1,0 +1,461 @@
+/*PHOTOS*/
+
+@import "variables.less";
+
+.section-photo {
+
+  position: relative;
+  padding-bottom: 48px;
+
+  .btn-link {
+    display: none;
+  }
+
+  &:not(.main-photo)::after {
+    width: 100%;
+    bottom: 0;
+    content: '';
+    position: absolute;
+    height: 35px;
+    background-image: url(../img/dest/angle-dark@mobile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.945;
+  }
+
+  &.main-photo {
+    padding-top: 30px;
+    padding-bottom: 0;
+    margin-bottom: 21px;
+
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  figure, figcaption, picture {
+    margin: 0;
+    padding: 0;
+  }
+
+  figure {
+    position: relative;
+  }
+
+  .container-photos {
+    figure {
+      margin-bottom: 20px;
+    }
+  }
+
+  .photo-wrapper {
+    width: 280px;
+    height: 176px;
+    overflow: hidden;
+
+    img {
+      width: 280px;
+      height: auto;
+      transform: scale(1.04) translate(-7px, 5px);
+    }
+  }
+
+  &.main-photo {
+    .photo-wrapper {
+      height: 480px;
+      overflow: hidden;
+
+      img {
+        width: 280px;
+        height: auto;
+        transform: scale(1.7) translate(-58px, 59px);
+      }
+    }
+  }
+
+  figcaption {
+    border: 1px solid @border-light;
+    border-top: none;
+    padding-bottom: 10px;
+
+    div {
+      padding: 25px 22px 19px;
+    }
+
+    h2, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
+    .features-list {
+      display: flex;
+      box-sizing: border-box;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-left: -27px;
+    }
+
+    .features-item {
+      list-style: none;
+      text-transform: uppercase;
+      background-repeat: no-repeat;
+      margin-left: 27px;
+      padding-bottom: 18px;
+
+      &__scissors {
+        padding-left: 57px;
+        background-image: url(../img/dest/scissors-ico.svg);
+        background-size: 21px 20px;
+        background-position: 21px 3px;
+      }
+
+      &__bierd {
+        padding-left: 54px;
+        background-image: url(../img/dest/bierd-ico.svg);
+        background-size: 23px 21px;
+        background-position: 10px 0;
+      }
+
+      &__mustache {
+        padding-left: 67px;
+        background-image: url(../img/dest/mustache-ico.svg);
+        background-size: 45px 12px;
+        background-position: 9px 6px;
+      }
+    }
+  }
+
+  &.main-photo {
+    figcaption {
+      padding-bottom: 0;
+
+      div {
+        padding: 20px 22px 19px;
+      }
+    }
+  }
+
+  .month-work {
+    position: absolute;
+    background-color: @brown;
+    top: 53.5%;
+    left: 0;
+    padding: 12px 21px 11px 24px;
+
+    &::after, &::before {
+      content: '';
+      position: absolute;
+      border-right: 19px solid transparent;
+      right: -9px;
+      display: block;
+    }
+
+    &::after {
+      top: 0;
+      border-top: 50px solid @brown;
+    }
+
+    &::before {
+      bottom: 0;
+      border-bottom: 50px solid @brown;
+    }
+
+    h2 {
+      color: white;
+      font-size: 20px;
+      line-height: 27px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (min-width: @tablet-width){
+
+  .section-photo {
+    padding-bottom: 62px;
+
+    &.main-photo {
+      padding-top: 56px;
+      margin-bottom: 41px;
+
+      &::before {
+        width: 100%;
+        top: -67px;
+        content: '';
+        position: absolute;
+        height: 68px;
+        background-image: url(../img/dest/angle-light@tablet.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+
+      .btn-link {
+        display: block;
+        width: 25%;
+        margin-left: auto;
+      }
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-content: flex-start;
+    }
+
+    .section-title {
+      margin-bottom: 41px;
+    }
+
+    figure {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      border: 1px solid @border-light;
+      box-sizing: border-box;
+    }
+
+    .container-photos {
+      figure {
+        margin-bottom: 41px;
+      }
+    }
+
+    .photo-wrapper {
+      width: 270px;
+      height: 292px;
+
+      img {
+        transform: scale(1.04) translate(-18px, 5px);
+      }
+    }
+
+    &.main-photo {
+      .photo-wrapper {
+        height: 478px;
+        img {
+          width: 320px;
+          transform: scale(1.5) translate(-86px, 53px);
+        }
+      }
+    }
+
+    figcaption {
+      border: none;
+      padding-bottom: 7px;
+      width: 330px;
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+
+      div {
+        padding: 41px 69px 0 11px;
+      }
+
+      h2 {
+        margin-bottom: 29px;
+      }
+
+      .features-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: auto;
+        padding-bottom: 33px;
+        margin-left: -25px;
+      }
+
+      .features-item {
+        padding-bottom: 0;
+        padding-top: 18px;
+        margin-left: 25px;
+
+        &__scissors {
+          padding-left: 50px;
+          background-position: 11px 20px;
+        }
+
+        &__bierd {
+          padding-left: 55px;
+          background-position: 11px 18px;
+        }
+
+        &__mustache {
+          padding-left: 57px;
+          background-position: 0 23px;
+        }
+      }
+    }
+
+    &.main-photo {
+      figcaption {
+        padding-bottom: 0;
+
+        div {
+          padding: 45px 50px 0 11px;
+        }
+      }
+    }
+
+    .month-work {
+      top: 7%;
+      padding: 13px 25px 11px 16px;
+    }
+  }
+}
+
+@media screen and (min-width: @desktop-width){
+
+  .section-photo {
+    padding-bottom: 87px;
+
+    &:not(.main-photo)::after {
+      display: none;
+    }
+
+    &.main-photo {
+      padding-top: 54px;
+
+      .btn-link {
+        width: 16.7%;
+      }
+    }
+
+    .container {
+      align-items: stretch;
+      align-content: stretch;
+    }
+
+    &.main-photo {
+      .container {
+        align-items: flex-start;
+        align-content: flex-start;
+      }
+    }
+
+    .section-title {
+      margin-bottom: 84px;
+    }
+
+    .container-photos {
+      figure {
+        width: 30.5%;
+        margin-bottom: 0;
+        margin-right: auto;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .photo-wrapper {
+      width: 479px;
+      height: 293px;
+
+      img {
+        width: 100%;
+        transform: scale(1) translate(0px, 0px);
+      }
+    }
+
+    &.main-photo {
+
+      .photo-wrapper {
+        width: 479px;
+        height: 478px;
+        img {
+          width: 480px;
+          height: 480px;
+          transform: scale(1) translate(0px, 0px);
+        }
+      }
+    }
+
+    figcaption {
+
+      width: 100%;
+      height: 247px;
+
+      div {
+        padding: 31px 8px 0 33px;
+      }
+
+      .features-list {
+        padding-bottom: 27px;
+        margin-left: -18px;
+      }
+
+      .features-item {
+        padding-top: 17px;
+        margin-left: 18px;
+
+        &__scissors {
+          padding-left: 76px;
+          background-position: 41px 20px;
+        }
+
+        &__bierd {
+          padding-left: 61px;
+          background-position: 19px 17px;
+        }
+
+        &__mustache {
+          padding-left: 73px;
+          background-position: 15px 21px;
+        }
+      }
+    }
+
+    &.main-photo {
+      figcaption {
+        padding-bottom: 0;
+        width: 50%;
+        height: 100%;
+
+        div {
+          padding: 130px 137px 0 40px;
+        }
+      }
+    }
+
+    .month-work {
+      left: auto;
+      right: 0;
+      top: 5.3%;
+      padding: 13px 20px 11px 16px;
+
+      &::after, &::before {
+        right: auto;
+        left: -19px;
+        border-left: 19px solid transparent;
+      }
+    }
+  }
+}

@@ -1,0 +1,201 @@
+@import "variables.less";
+
+/*ONLY FOR FORMS */
+
+.form {
+  background-color: @bg-light;
+}
+
+input, label, legend, form {
+  box-sizing: border-box;
+}
+
+input[type='email'], input[type='password'], input[type='text'], input[type='tel'], input[type='search'], textarea {
+  border: 1px solid @border-light;
+  background-color: white;
+  font: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  color: black;
+
+
+  &:hover {
+    border-color: @border-light__hover;
+  }
+
+  &:active, &:focus {
+    outline: none;
+    border-color: #999999;
+  }
+}
+
+input[type='email']::placeholder, input[type='password']::placeholder, input[type='text']::placeholder,
+input[type='tel']::placeholder, input[type='search']::placeholder, textarea::placeholder {
+  font: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  color: black;
+  opacity: 1;
+}
+
+textarea {
+  resize: none;
+  display: block;
+}
+
+.btn-brown {
+  background-color: @brown;
+  color: white;
+
+  &:hover {
+    background-color: @brown__hover;
+  }
+
+  &:active {
+    background-color: @brown__hover;
+    color: rgba(255,255,255,0.3);
+  }
+
+  &__disabled {
+    background-color: #aeaeae;
+  }
+}
+
+.checkbox-ico {
+  display: block;
+  width: 33px;
+  height: 33px;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid @border-light;
+  position: relative;
+  transition: 0.3s linear;
+
+  &::after {
+    width: 22px;
+    height: 16px;
+    content: '';
+    display: block;
+    background-image: url("../img/dest/tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    opacity: 0;
+    transition: 0.3s linear;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+input[type='checkbox'] {
+  &:hover + .checkbox-ico {
+    border-color: @border-light__hover;
+  }
+
+  &:active + .checkbox-ico {
+    border-color: @border-light__hover;
+    background-color: @border-light__hover;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &:checked + .checkbox-ico::after {
+    opacity: 1;
+  }
+
+  &:checked:hover + .checkbox-ico {
+    border-color: @border-light__hover;
+  }
+
+  &:checked:active + .checkbox-ico {
+    border-color: @border-light__hover;
+    background-color: @border-light__hover;
+
+    &::after {
+      opacity: 0;
+    }
+  }
+}
+
+.radio-ico {
+  display: block;
+  width: 52px;
+  height: 52px;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid @border-light;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.3s linear;
+
+  &::after {
+    width: 18px;
+    height: 18px;
+    content: '';
+    display: block;
+    background-color: white;
+    border: 1px solid @border-light;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.3s linear;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+input[type='radio'] {
+  &:hover + .radio-ico {
+    border-color: @border-light__hover;
+  }
+
+  &:active + .radio-ico {
+    border-color: @border-light__hover;
+    background-color: @border-light__hover;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &:checked + .radio-ico::after {
+    opacity: 1;
+  }
+
+  &:checked:hover + .radio-ico {
+    border-color: @border-light__hover;
+
+    &::after {
+      border-color: @border-light__hover;
+    }
+  }
+
+  &:checked:active + .radio-ico {
+    border-color: @border-light__hover;
+    background-color: @border-light__hover;
+
+    &::after {
+      opacity: 0;
+    }
+  }
+}
+
+@media screen and (min-width: @tablet-width){
+  input[type='email'], input[type='password'], input[type='text'], input[type='search'], input[type='tel'], textarea {
+    font-size: 24px;
+  }
+
+  input[type='email']::placeholder, input[type='password']::placeholder, input[type='text']::placeholder,
+  input[type='tel']::placeholder, input[type='search']::placeholder, textarea::placeholder {
+    font-size: 24px;
+  }
+}

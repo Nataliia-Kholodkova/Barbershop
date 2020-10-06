@@ -1,0 +1,233 @@
+@import "variables.less";
+
+@keyframes slide-down {
+  0% {
+    top: -2000px;
+  }
+
+  90% {
+    top: 130px;
+  }
+
+  95% {
+    top: 120px;
+  }
+
+  100% {
+    top: 130px
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    top: 130px;
+  }
+
+  100% {
+    top: -2000px;
+  }
+}
+
+.login-form {
+  padding: 33px 0 13px;
+  background-color: #f8f5f2;
+  box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.75);
+  width: 320px;
+  z-index: 2;
+
+  &>.btn-close {
+    display: none;
+  }
+
+  &__closed {
+    top: -9999px;
+    animation-name: slide-up;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+  }
+
+  &__opened {
+    top: 135px;
+    animation-name: slide-down;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  h2, p {
+    text-align: center;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+.form-login {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 24px 0;
+
+  .label, .password-forgot {
+    margin-bottom: 6px;
+  }
+
+  .label-password {
+    margin-bottom: 27px;
+  }
+
+  .label-email, .label-password {
+    width: 100%;
+    position: relative;
+
+    input {
+      width: 100%;
+      padding: 9px 18px;
+      padding-right: 48px;
+    }
+
+    span {
+      position: absolute;
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 48px;
+      height: 48px;
+      display: block;
+      top: 1px;
+      right: 2px;
+    }
+
+    .login-ico {
+      background-image: url("../img/dest/user.png");
+    }
+
+    .password-ico {
+      background-image: url("../img/dest/lock.png");
+    }
+  }
+
+  .label-checkbox {
+    display: flex;
+    font-size: 18px;
+    line-height: 24px;
+    align-items: center;
+
+    .checkbox-ico {
+      margin-right: 14px;
+    }
+  }
+
+  .btn-submit, .btn-link {
+    width: 130px;
+    margin-top: 23px;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+.password-forgot {
+  font-size: 18px;
+  line-height: 27px;
+  text-decoration: underline;
+  display: block;
+  padding-top: 3px;
+}
+
+
+@media screen and (min-width: @tablet-width){
+  .login-form {
+    padding: 53px 0 34px;
+    width: 461px;
+
+    &>.btn-close {
+      display: block;
+      position: absolute;
+      width: 27px;
+      height: 27px;
+      background-image: url(../img/dest/menu-btn-close.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+      padding: 0;
+      right: -103px;
+      top: 60px;
+      background-color: transparent;
+    }
+
+    &__opened {
+      top: 135px;
+    }
+
+    h2 {
+      font-size: 40px;
+      line-height: 40px;
+      margin-bottom: 14px;
+    }
+
+    .container-login-form {
+      width: 100%;
+      padding: 0 71px;
+    }
+  }
+
+  .form-login {
+    padding: 24px 0;
+
+    .label-password {
+      margin-bottom: 27px;
+    }
+
+    .label-email, .label-password {
+      width: 100%;
+      position: relative;
+
+      input {
+        width: 100%;
+        padding: 18px 23px 20px;
+      }
+
+      span {
+        top: 10px;
+        right: 10px;
+      }
+    }
+
+    .btn-submit {
+      width: 100%;
+      margin-top: 25px;
+      padding: 13px 0;
+
+      span {
+        display: inline;
+      }
+    }
+
+    .btn-link {
+      display: none;
+    }
+  }
+
+  .password-forgot {
+    font-size: 18px;
+    line-height: 27px;
+    text-decoration: underline;
+    display: block;
+    padding-top: 3px;
+  }
+}

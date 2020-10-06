@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Записаться к нам</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="css/sanitize.css">-->
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+<!--HEADER-->
+<header class="header header-form">
+    <!--LOGO-->
+    <div class="container-header">
+        <div class="container logo main-navigation-logo container">
+            <picture>
+                <source srcset="img/dest/logo-desktop.svg" media="(min-width: 1200px)">
+                <source srcset="img/dest/logo-tablet.svg" media="(min-width: 768px)">
+                <img src="img/dest/logo-mobile.svg" class="logo-image" width="226" height="30">
+            </picture>
+        </div>
+        <!--NAVIGATION-->
+        <nav class="navigation navigation__opened">
+            <button type="button" class="btn menu-btn menu-btn__open"></button>
+            <button type="button" class="btn menu-btn menu-btn__close"></button>
+            <div class="navigation-container">
+                <ul class="main-navigation">
+                    <li class="main-navigation-item">
+                        <a href="index.html">Главная</a>
+                    </li>
+                    <li class="main-navigation-item main-navigation-item__active">
+                        <a>Наши работы</a>
+                    </li>
+                    <li class="main-navigation-item">
+                        <a href="form.html">Записаться</a>
+                    </li>
+                    <li class="main-navigation-item">
+                        <a href="#">Контакты</a>
+                    </li>
+                    <li class="main-navigation-item">
+                        <a href="#">HTML Academy</a>
+                    </li>
+                </ul>
+                <ul class="user-navigation">
+                    <li class="user-navigation-item">
+                        <a href="#" onclick="loginFormOpen()">
+                            <span>Вход</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<!--MAIN-->
+<main class="main section-main">
+    <!--MAIN PHOTO-->
+    <section class="section-photo main-photo">
+        <div class="container">
+            <h2 class="section-title">наши работы</h2>
+            <a href="index.html" class="btn btn-link">На главную</a>
+            <figure>
+                <div class="photo-wrapper photo-wrapper__main">
+                    <picture>
+                        <img src="img/dest/photo-1-desktop.jpg.jpg" class="photo" width="480" height="480"
+                             srcset="img/dest/photo-1-desktop.jpg@2x.jpg">
+                    </picture>
+                </div>
+                <figcaption class="photo-description">
+                    <div>
+                        <h2>Лжепётр Мчиславский</h2>
+                        <p>Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и
+                            до скорого!</p>
+                    </div>
+                    <ul class="features-list">
+                        <li class="features-item features-item__scissors">
+                            Стрижка
+                        </li>
+                        <li class="features-item features-item__bierd">
+                            Бритье
+                        </li>
+                        <li class="features-item features-item__mustache">
+                            Усы
+                        </li>
+                    </ul>
+                </figcaption>
+                <div class="month-work">
+                    <h2>Работа месяца</h2>
+                </div>
+            </figure>
+        </div>
+    </section>
+    <!--PHOTOS-->
+    <section class="section-photo ">
+        <div class="container container-photos">
+            <figure>
+                <div class="photo-wrapper">
+                    <picture>
+                        <source srcset="img/photo-2-desktop.jpg.jpg, img/photo-2-desktop.jpg@2.jpg">
+                        <img src="img/dest/photo-2-desktop.jpg.jpg" class="photo" width="294" height="294"
+                             srcset="img/dest/photo-2-desktop.jpg@2x.jpg">
+                    </picture>
+                </div>
+                <figcaption class="photo-description">
+                    <div>
+                        <h2>Саша Мальцев</h2>
+                        <p>Попросил омолодить и омолодили! Кто теперь скажет, что мне 45? </p>
+                    </div>
+                    <ul class="features-list">
+                        <li class="features-item features-item__scissors">
+                            Стрижка
+                        </li>
+                    </ul>
+                </figcaption>
+            </figure>
+            <figure>
+                <div class="photo-wrapper">
+                    <picture>
+                        <img src="img/dest/photo-3-desktop.jpg.jpg" class="photo" width="294" height="294"
+                             srcset="img/dest/photo-3-desktop.jpg.jpg">
+                    </picture>
+                </div>
+                <figcaption class="photo-description">
+                    <div>
+                        <h2>Владимир Иваныч</h2>
+                        <p>К зимнему сезону — готов!</p>
+                    </div>
+                    <ul class="features-list">
+                        <li class="features-item features-item__bierd">
+                            Борода
+                        </li>
+                        <li class="features-item features-item__mustache">
+                            Усы
+                        </li>
+                    </ul>
+                </figcaption>
+            </figure>
+            <figure>
+                <div class="photo-wrapper">
+                    <picture>
+                        <img src="img/dest/photo-4-desktop.jpg.jpg" class="photo" width="294" height="294"
+                             srcset="img/dest/photo-4-desktop.jpg.jpg">
+                    </picture>
+                </div>
+                <figcaption class="photo-description">
+                    <div>
+                        <h2>Винстон Синий</h2>
+                        <p>Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!</p>
+                    </div>
+                    <ul class="features-list">
+                        <li class="features-item features-item__scissors">
+                            Стрижка
+                        </li>
+                    </ul>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+    <!--PRICELIST-->
+    <section class="section-price">
+        <div class="container">
+            <h2 class="section-title">ПРЕЙСКУРАНТ</h2>
+            <table>
+                <tbody>
+                <tr>
+                    <td class="number">1</td>
+                    <th class="name">Классическая стрижка
+                        <span><br>(с мытьём головы)</span>
+                    </th>
+                    <td class="feature">с мытьём головы</td>
+                    <td class="price">1 500 руб.</td>
+                </tr>
+                <tr>
+                    <td class="number">2</td>
+                    <th class="name">Современный вариант
+                        <span><br>(с мытьём головы)</span>
+                    </th>
+                    <td class="feature">с мытьём головы</td>
+                    <td class="price">1 500 руб.</td>
+                </tr>
+                <tr>
+                    <td class="number">3</td>
+                    <th class="name">Индивидуальный подход
+                        <span><br>(с мытьём головы)</span>
+                    </th>
+                    <td class="feature">с мытьём головы</td>
+                    <td class="price">2 000 руб.</td>
+                </tr>
+                <tr>
+                    <td class="number">4</td>
+                    <th class="name">Бритьё головы
+                        <span><br>(без мытья)</span>
+                    </th>
+                    <td class="feature">без мытья</td>
+                    <td class="price">500 руб.</td>
+                </tr>
+                <tr>
+                    <td class="number">5</td>
+                    <th class="name">Бритьё головы
+                        <span><br>(с мытьём головы)</span>
+                    </th>
+                    <td class="feature">с мытьём головы</td>
+                    <td class="price">1 000 руб.</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="time">
+                <img src="img/dest/clock.svg" width="58" height="57">
+                <p>C 10:00 до 14:00 скидка 20%</p>
+            </div>
+        </div>
+    </section>
+</main>
+<!--FOOTER-->
+<footer class="footer footer-photos">
+    <div class="container container-footer">
+        <div class="footer-column address">
+            <p>Барбершоп Бородинский</p>
+            <p>г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
+            <a class="btn btn-link" type="tel:78125556666"><span>Тел.: </span>+7 (812) 555-66-66</a>
+        </div>
+        <div class="footer-column socials">
+            <p>Давайте дружить!</p>
+            <ul class="social-list">
+                <li class="social-item"><a href="#" class="btn btn-link vk"></a></li>
+                <li class="social-item"><a href="#" class="btn btn-link fb"></a></li>
+                <li class="social-item"><a href="#" class="btn btn-link insta"></a></li>
+            </ul>
+        </div>
+        <div class="footer-column developed">
+            <p>Разработано:</p>
+            <a href="#" class="btn btn-link">HTML ACADEMY</a>
+        </div>
+    </div>
+</footer>
+<!--MODAL LOGIN-->
+<section class="login-form modal">
+    <button class="btn btn-close" type="button" onclick="loginFormClose()"></button>
+    <div class="container container-login-form">
+        <h2>ЛИЧНЫЙ КАБИНЕТ</h2>
+        <p>Введите свой логин и пароль, чтобы войти</p>
+        <form class="form form-login" action="#" method="post">
+            <label class="label label-email">
+                <input type="email" placeholder="Логин">
+                <span class="login-ico"></span>
+            </label>
+            <label class="label label-password">
+                <input type="password" placeholder="Пароль">
+                <span class="password-ico"></span>
+            </label>
+            <label class="label label-checkbox label-remember">
+                <input type="checkbox" class="visually-hidden">
+                <span class="checkbox-ico"></span>
+                Запомните меня
+            </label>
+            <a class="password-forgot" href="#">Я забыл пароль!</a>
+            <button class="btn btn-submit btn-brown" type="submit">Войти <span>в личный кабинет</span></button>
+            <button class="btn btn-close btn-link" type="button" onclick="loginFormClose()">ЗАКРЫТЬ</button>
+        </form>
+    </div>
+</section>
+<div class="overlay"></div>
+
+<script src="js/script.min.js"></script>
+
+</body>
+</html>

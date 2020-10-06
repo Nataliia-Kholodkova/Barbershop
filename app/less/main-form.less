@@ -1,0 +1,512 @@
+/*MAIN FORM*/
+
+
+@import "variables.less";
+
+.section-form {
+  position: relative;
+  padding-bottom: 35px;
+  padding-top: 30px;
+
+  &::after {
+    width: 100%;
+    bottom: 0;
+    content: '';
+    position: absolute;
+    height: 35px;
+    background-image: url(../img/dest/angle-dark@mobile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+.container-form-main {
+  padding: 5px 20px;
+
+  .btn-link {
+    display: none;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+}
+
+.form-main {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 35px;
+  width: 100%;
+
+  .fieldset {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    margin-bottom: 27px;
+
+    legend {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 20px;
+      line-height: 27px;
+      margin-bottom: 35px;
+    }
+
+    &-models {
+      margin-bottom: 39px;
+    }
+  }
+
+  .btn-brown {
+    width: 100%;
+    padding: 13px;
+  }
+}
+
+.form-list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    margin-bottom: 6px;
+    box-sizing: border-box;
+  }
+
+  .label {
+    width: 100%;
+
+    input, textarea {
+      padding: 9px 18px;
+      width: 100%;
+    }
+
+    input[type='radio'], input[type='checkbox'] {
+      width: auto;
+    }
+
+    textarea {
+      height: 111px;
+      width: 100%;
+    }
+  }
+}
+
+.models-list {
+
+  li {
+    width: 33.33%;
+    margin-bottom: 3px;
+
+    .label-model {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      align-content: flex-start;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      height: 204px;
+
+      .radio-label {
+        text-align: center;
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      .radio-ico {
+        margin-bottom: 11px;
+      }
+
+      &__admiral {
+        background-image: url("../img/dest/beard1.svg");
+        background-size: 52px 49px;
+        background-position: 24px 99px;
+      }
+
+      &__forest {
+        background-image: url("../img/dest/beard2.svg");
+        background-size: 58px 68px;
+        background-position: 18px 98px;
+      }
+
+      &__northman {
+        background-image: url("../img/dest/beard3.svg");
+        background-size: 64px 78px;
+        background-position: 16px 99px;
+      }
+
+      &__master {
+        background-image: url("../img/dest/beard4.svg");
+        background-size: 58px 98px;
+        background-position: 19px 99px;
+      }
+
+      &__wiseman {
+        background-image: url("../img/dest/beard5.svg");
+        background-size: 46px 105px;
+        background-position: 23px 99px;
+      }
+    }
+  }
+}
+
+.services-list {
+
+  li {
+    margin-bottom: 21px;
+  }
+
+  .label-service {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+
+    .checkbox-label {
+      text-align: left;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    .checkbox-ico {
+      margin-right: 25px;
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
+@media screen and (min-width: @tablet-width) {
+
+  .container-form-main {
+    padding: 55px 65px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .section-title {
+      margin: 0;
+      margin-bottom: 72px;
+    }
+
+    .btn-link {
+      display: block;
+      width: 25%;
+    }
+  }
+
+  .section-form {
+    position: relative;
+    padding-bottom: 0;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      width: 100%;
+      top: -67px;
+      content: '';
+      position: absolute;
+      height: 68px;
+      background-image: url(../img/dest/angle-light@tablet.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  .form-list {
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .label {
+      input, textarea {
+        padding: 19px 23px;
+        width: 100%;
+      }
+
+      textarea {
+        height: 211px;
+      }
+    }
+  }
+
+  .contacts-list {
+    li:first-child {
+      margin-bottom: 36px;
+    }
+  }
+
+  .name-list {
+    li {
+      width: 33.33%;
+    }
+    li:nth-child(2) {
+      order: -1;
+    }
+  }
+
+  .form-main {
+
+    .btn-brown {
+      font-size: 24px;
+      line-height: 30px;
+      padding: 20px;
+    }
+
+    .fieldset {
+      legend {
+        font-size: 30px;
+        line-height: 30px;
+        text-transform: uppercase;
+        width: 59%;
+        margin-bottom: 45px;
+      }
+    }
+
+    .fieldset-info {
+      margin-bottom: 47px;
+    }
+
+    .fieldset-models {
+      border-top: 1px solid @border-light;
+      margin-bottom: 58px;
+    }
+
+    .fieldset-services {
+      border-top: 1px solid @border-light;
+      margin-bottom: 13px;
+
+      legend {
+        margin-bottom: 68px;
+      }
+    }
+  }
+
+  .models-list {
+    li {
+      width: 15%;
+      margin-bottom: 0;
+      margin-right: auto;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .label-model {
+        height: 239px;
+
+        .radio-label {
+          font-size: 24px;
+        }
+
+        .radio-ico {
+          margin-bottom: 25px;
+        }
+
+        &__admiral {
+          background-position: 24px 136px;
+        }
+
+        &__forest {
+          background-position: 18px 135px;
+        }
+
+        &__northman {
+          background-position: 16px 137px;
+        }
+
+        &__master {
+          background-position: 19px 136px;
+        }
+
+        &__wiseman {
+          background-position: 25px 134px;
+        }
+      }
+    }
+  }
+
+  .services-list {
+
+    li {
+      margin-bottom: 48px;
+      width: 50%;
+
+      &:first-child {
+        order: 1;
+      }
+
+      &:nth-child(2) {
+        order: 4;
+      }
+
+      &:nth-child(3) {
+        order: 2;
+      }
+
+      &:nth-child(4) {
+        order: 5;
+      }
+
+      &:nth-child(5) {
+        order: 3;
+      }
+
+      &:last-child {
+        order: 6;
+      }
+    }
+
+    .label-service {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: flex-start;
+
+      .checkbox-label {
+        font-size: 24px;
+        line-height: 30px;
+      }
+
+      .checkbox-ico {
+        margin-right: 25px;
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: @desktop-width) {
+
+  .container-form-main {
+    padding: 55px 120px 52px;
+
+    .section-title {
+      text-align: center;
+    }
+
+    .btn-link {
+      display: block;
+      width: 16.6%;
+    }
+  }
+
+  .contacts-list {
+    li {
+      width: 48%;
+    }
+
+    li:first-child {
+      margin-right: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  .name-list {
+
+    li {
+      width: 30.7%;
+      margin-right: auto;
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .form-main {
+
+    .fieldset {
+      legend {
+        width: 42%;
+        margin-bottom: 51px;
+      }
+    }
+
+    .fieldset-info {
+      margin-bottom: 63px;
+    }
+
+    .fieldset-models {
+      margin-bottom: 58px;
+    }
+
+    .fieldset-services {
+      border-top: 1px solid @border-light;
+      margin-bottom: 33px;
+
+      legend {
+        margin-bottom: 68px;
+      }
+    }
+  }
+
+  .models-list {
+    li {
+      width: 17%;
+
+      .radio-label {
+        width: 100%;
+      }
+
+      .radio-ico {
+        margin-bottom: 25px;
+      }
+
+      .label-model {
+
+        &__admiral {
+          background-position: 55px 136px
+        }
+
+        &__forest {
+          background-position: 53px 135px;
+        }
+
+        &__northman {
+          background-position: 50px 137px;
+        }
+
+        &__master {
+          background-position: 53px 136px;
+        }
+
+        &__wiseman {
+          background-position: 58px 134px;
+        }
+      }
+    }
+  }
+
+  .services-list {
+
+    li {
+      width: 33.33%;
+    }
+  }
+}
+
+

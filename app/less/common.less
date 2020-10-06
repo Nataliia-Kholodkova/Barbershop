@@ -1,0 +1,176 @@
+/*COMMON*/
+
+
+@import "variables.less";
+
+
+html {
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  font-family: PTSansNarrow, sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 24px;
+  background-color: @bg-light;
+  position: relative;
+  min-width: 320px;
+  width: 100%;
+}
+
+a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.section-title {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+.section-text{
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+}
+
+.btn {
+  font: inherit;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.btn-link {
+  border: 1px solid @border-light;
+  padding: 12px 0;
+  transition: 0.3s linear;
+
+  &:hover {
+    border-color: @border-light__hover;
+  }
+
+  &:active {
+    background-color: #d5c9bd;
+    border-color: @border-light__hover;
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.dots {
+  display: flex;
+  width: 72px;
+  margin: auto;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.dot {
+  box-sizing: border-box;
+  border: 1px solid;
+  transform: rotate(45deg);
+  width: 6px;
+  height: 6px;
+  display: block;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 1;
+  display: none;
+  opacity: 0;
+  transition: 0.3s linear;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  &__opened {
+    opacity: 1;
+    display: block;
+  }
+}
+
+.section-title {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@media screen and (min-width: @tablet-width){
+  .container {
+    width: 768px;
+    padding: 0 64px;
+  }
+
+  .section-title {
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: 700;
+    text-align: left;
+    width: 50%;
+  }
+
+  .section-text {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: @desktop-width){
+  .container {
+    width: 1200px;
+    padding: 0 120px;
+  }
+
+  .section-title {
+    width: 34%;
+  }
+}

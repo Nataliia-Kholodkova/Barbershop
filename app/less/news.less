@@ -1,0 +1,203 @@
+/*NEWS*/
+
+@import "variables.less";
+
+
+.section-title, .new p {
+  margin: 0;
+  padding: 0;
+}
+
+.news {
+  background-color: @bg-light;
+  border-bottom: 1px solid @border-light;
+  box-sizing: border-box;
+}
+
+.container-news {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 34px;
+  padding-bottom: 29px;
+
+  .btn-link {
+    order: 1;
+  }
+
+  &* {
+    width: 100%;
+  }
+
+  .section-title {
+    color: black;
+    margin-bottom: 11px;
+  }
+
+  .btn-link {
+    width: 100%;
+    margin-top: 6px;
+  }
+}
+
+.new {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 1px solid @border-light;
+  padding: 18px 0;
+
+  .calendar {
+    width: 50px;
+    height: 51px;
+    background-color: black;
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding-top: 4px;
+
+    .date {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 30px;
+      color: white;
+      display: block;
+    }
+
+    .month {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 13px;
+      color: white;
+      display: block;
+    }
+
+    &::after {
+      display: block;
+      content: '';
+      width: 100%;
+      border-top: 11px solid black;
+      position: absolute;
+      bottom: -11px;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+    }
+  }
+
+  .new-text {
+    width: 211px;
+  }
+
+  .new-text a {
+    color: black;
+    font-size: 18px;
+    text-align: left;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      color: @brown;
+    }
+
+    &:active {
+      text-decoration: underline;
+      color: @brown__hover;
+    }
+  }
+
+  &:last-child {
+    display: none;
+  }
+
+  &:first-of-type {
+    border-top: none;
+  }
+
+  &:hover .calendar {
+    background-color: @brown;
+    &::after {
+      border-top-color: @brown;
+    }
+  }
+
+  &:active .calendar {
+    background-color: @brown__hover;
+    &::after {
+      border-top-color: @brown__hover;
+    }
+
+    .date {
+      color: rgba(255,255,255,0.3);
+    }
+
+    .month {
+      color: rgba(255,255,255,0.3);
+    }
+  }
+}
+
+@media screen and (min-width: @tablet-width) {
+  .container-news {
+    padding-top: 0;
+    padding-bottom: 36px;
+    justify-content: space-between;
+
+
+    .section-title {
+      color: black;
+      margin-bottom: 0;
+      margin-top: 11px;
+    }
+
+    .btn-link {
+      order: 0;
+      width: 25%;
+      margin-top: 0;
+    }
+  }
+
+  .new {
+    width: 50%;
+    justify-content: flex-start;
+    border-top: none;
+    padding: 49px 0 0;
+
+    .new-text a span {
+      display: none;
+    }
+
+    .calendar {
+      margin-right: 21px;
+    }
+  }
+}
+
+
+@media screen and (min-width: @desktop-width) {
+  .container-news {
+    padding-top: 24px;
+    padding-bottom: 40px;
+    justify-content: space-between;
+
+    .section-title {
+      margin-left: 71px;
+      margin-top: 9px;
+    }
+
+    .btn-link {
+      width: 161px;
+      margin-top: 0;
+    }
+  }
+
+  .new {
+    width: 33.33%;
+    padding: 48px 0 0;
+
+    &:last-child {
+      display: flex;
+    }
+  }
+}

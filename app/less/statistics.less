@@ -1,0 +1,267 @@
+/*STATS*/
+
+
+@import "variables.less";
+
+.statistics-header, .statistics-body {
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.statistics-body {
+  padding: 0;
+
+  .lie {
+    color: rgba(255,255,255,0.3);
+    font-size: 20px;
+    line-height: 27px;
+    padding: 9px 20px;
+    text-align: center;
+  }
+}
+
+.statistics-header h2, .statistics-body h2, .statistics-header p, .statistics-body p {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.statistics-header {
+  background-color: white;
+  padding: 28px 18px;
+
+  h2 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+  }
+
+  .lie {
+    display: none;
+  }
+}
+
+.statistics-block {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: space-between;
+  padding: 19px 20px 20px;;
+
+  .statistics-title, .statistics-content {
+    width: 50%;
+    color: #f7f4f1;
+    display: flex;
+    align-items: center;
+  }
+
+  .statistics-title {
+    text-align: left;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 700;
+    align-items: flex-start;
+  }
+
+  .statistics-content {
+    text-align: right;
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 400;
+    justify-content: flex-end;
+  }
+
+  sup {
+    font-size: 24px;
+    margin-left: 8px;
+    margin-top: -8px;
+  }
+
+  &:first-of-type {
+    background-color: #404040;
+  }
+
+  &:nth-of-type(2) {
+    background-color: #4e4e4e;
+  }
+
+  &:nth-of-type(3) {
+    background-color: #353535;
+  }
+
+  &:last-of-type {
+    background-color: #404040;
+  }
+}
+
+.statistics {
+  position: relative;
+  &::before {
+    content: '';
+    background-color: #353535;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 560px;
+    z-index: -1;
+  }
+}
+
+
+.container-statistic {
+  padding: 0;
+}
+
+
+@media screen and (min-width: @tablet-width) {
+
+  .statistics {
+    margin-top: -186px;
+
+    &::before {
+      height: 320px;
+    }
+  }
+
+  .container-statistic {
+    padding: 0 64px;
+  }
+
+  .statistics-header {
+    background-color: white;
+    padding: 19px 18px 28px;
+    position: relative;
+
+    &::before {
+      display: block;
+      content: '';
+      border-top: 22px solid white;
+      border-left: 22px solid transparent;
+      border-bottom: 22px solid transparent;
+      position: absolute;
+      top: 43px;
+      left: -22px;
+    }
+
+    h2 {
+      width: 50%;
+      font-size: 40px;
+      line-height: 40px;
+      text-transform: none;
+      text-align: left;
+      padding: 13px 23px 0;
+      margin: 0;
+    }
+
+    p {
+      width: 50%;
+      text-align: left;
+      padding: 18px 32px 8px;
+    }
+
+    .lie {
+      display: block;
+      width: 100%;
+      color: rgba(0,0,0,0.3);
+      font-size: 20px;
+      line-height: 27px;
+      padding: 0 7px;
+      text-align: left;
+      margin-top: auto;
+
+      sup {
+        font-size: 18px;
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .statistics-body {
+    padding: 0;
+
+    .lie {
+      display: none;
+    }
+  }
+
+  .statistics-block {
+    width: 50%;
+    justify-content: space-between;
+    padding: 25px 32px 28px;
+
+    .statistics-title, .statistics-content {
+      width: 100%;
+      color: #f7f4f1;
+      align-items: center;
+    }
+
+    .statistics-title {
+      text-align: right;
+      font-size: 72px;
+      line-height: 72px;
+      margin-bottom: 7px;
+    }
+
+    .statistics-content {
+      text-align: right;
+      line-height: 27px;
+      font-size: 20px;
+      justify-content: flex-start;
+    }
+
+    .statistics-content br {
+      display: none;
+    }
+
+    sup {
+      font-size: 42px;
+      margin-left: 16px;
+      margin-top: -26px;
+    }
+  }
+}
+
+@media screen and (min-width: @desktop-width) {
+  .statistics {
+    margin-top: -159px;
+
+    .container {
+      display: flex;
+      justify-content: flex-start;
+      padding: 0 120px;
+    }
+  }
+
+  .statistics-header {
+    padding: 19px 18px 28px;
+    width: 35%;
+
+    &::before {
+      top: 37px;
+    }
+
+    h2 {
+      width: 100%;
+    }
+
+    p {
+      width: 100%;
+      padding: 34px 24px 8px;
+    }
+  }
+
+  .statistics-body {
+    width: 70%;
+  }
+}
